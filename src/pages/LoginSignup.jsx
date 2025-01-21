@@ -14,7 +14,7 @@ const LoginSignup = () => {
   useEffect(() => {
     const user = localStorage.getItem('user');
     if (user) {
-      toast.info('Login successful!');
+      toast.info('You are already logged in');
       navigate('/');
     }
   }, [navigate]);
@@ -29,7 +29,7 @@ const LoginSignup = () => {
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
-
+    
     // Basic validation
     if (!validateEmail(email)) {
       toast.error('Please enter a valid email address');
@@ -66,18 +66,18 @@ const LoginSignup = () => {
       // Save user to localStorage
       users.push(newUser);
       localStorage.setItem('users', JSON.stringify(users));
-
+      
       // Log user in
       const userData = { ...newUser };
       delete userData.password; // Don't store password in session
       localStorage.setItem('user', JSON.stringify(userData));
-      window.location.reload();
+      
       toast.success('Registration successful!');
     } else {
       // Login logic
       const users = JSON.parse(localStorage.getItem('users') || '[]');
       const user = users.find(u => u.email === email && u.password === password);
-
+      
       if (!user) {
         toast.error('Invalid email or password');
         return;
@@ -87,12 +87,13 @@ const LoginSignup = () => {
       const userData = { ...user };
       delete userData.password;
       localStorage.setItem('user', JSON.stringify(userData));
-      window.location.reload();
+      
       toast.success('Login successful!');
     }
 
     // Redirect and refresh
     navigate('/');
+    window.location.reload();
   };
 
   return (
