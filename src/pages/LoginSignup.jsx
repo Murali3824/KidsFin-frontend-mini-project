@@ -12,9 +12,9 @@ const LoginSignup = () => {
 
   // Check if user is already logged in
   useEffect(() => {
-    const user = localStorage.getItem('user');
-    if (user) {
-      toast.info('Login successful!');
+    const users = localStorage.getItem('user');
+    if (users) {
+      toast.info('You are already logged in');
       navigate('/');
     }
   }, [navigate]);
