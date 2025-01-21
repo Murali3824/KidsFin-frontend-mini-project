@@ -110,7 +110,7 @@ const Navbar = () => {
                         <NavLink to="/" className="hover:text-[#C6A55C] px-4 py-2 font-medium transition-colors duration-300">Home</NavLink>
                         <NavLink to="/about" className="hover:text-[#C6A55C] px-4 py-2 font-medium transition-colors duration-300">About</NavLink>
                         <NavLink to="/features" className="hover:text-[#C6A55C] px-4 py-2 font-medium transition-colors duration-300">Features</NavLink>
-                        <NavLink to="/contact" className="hover:text-[#C6A55C] px-4 py-2 font-medium transition-colors duration-300">Contact Us</NavLink>
+                        <NavLink to="/contact" className="hover:text-[#C6A55C] px-4 py-2 font-medium transition-colors duration-300">Contact</NavLink>
                         <NavLink to="/faq" className="hover:text-[#C6A55C] px-4 py-2 font-medium transition-colors duration-300">FAQ</NavLink>
                     </div>
 
@@ -146,6 +146,7 @@ const Navbar = () => {
                                 className="text-white flex items-center hover:text-[#C6A55C] transition-colors duration-300"
                             >
                                 <User size={24} />
+                                <span className="ml-2">Account</span>
                             </NavLink>
 
                             {/* Mobile Menu Toggle */}
@@ -192,7 +193,7 @@ const Navbar = () => {
                             className="text-2xl hover:text-[#C6A55C]"
                             onClick={closeMenu}
                         >
-                            Contact Us
+                            Contact
                         </NavLink>
                         <NavLink
                             to="/faq"
