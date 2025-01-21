@@ -12,9 +12,9 @@ const LoginSignup = () => {
 
   // Check if user is already logged in
   useEffect(() => {
-    const users = localStorage.getItem('user');
-    if (users) {
-      toast.info('You are already logged in');
+    const user = localStorage.getItem('user');
+    if (user) {
+      toast.info('Login successful!');
       navigate('/');
     }
   }, [navigate]);
@@ -71,7 +71,7 @@ const LoginSignup = () => {
       const userData = { ...newUser };
       delete userData.password; // Don't store password in session
       localStorage.setItem('user', JSON.stringify(userData));
-
+      window.location.reload();
       toast.success('Registration successful!');
     } else {
       // Login logic
