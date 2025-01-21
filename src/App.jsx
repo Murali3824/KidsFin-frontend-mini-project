@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
-import FAQ from './pages/Faq';
+import FAQ from './pages/FAQ';
 import About from './pages/About';
 import Phases from './components/Phases';
 import LoginSignup from './pages/LoginSignup';
