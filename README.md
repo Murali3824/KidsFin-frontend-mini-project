@@ -48,6 +48,7 @@ To get started, clone the repository and follow these steps:
 
    ```bash
    git clone https://github.com/Murali3824/KidsFin-frontend-mini-project.git
+
    cd KidsFin-frontend-mini-project
 
    ```
@@ -60,9 +61,9 @@ To get started, clone the repository and follow these steps:
 
 Start the development server:
 
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
 Access the application by opening your browser and navigating to:
 
